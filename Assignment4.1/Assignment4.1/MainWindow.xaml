@@ -1,0 +1,35 @@
+﻿<Window x:Class="Assignment4._1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Assignment4._1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" 
+               FontSize="20" FontWeight="Bold" 
+               Grid.ColumnSpan="2" Grid.Row="0">MSSA Calculator App</TextBlock>
+
+        <TextBox x:Name="runningCount" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" Grid.ColumnSpan="2" Width="80" BorderBrush="Gray" TextChanged="TextBox_TextChanged" />
+
+        <TextBlock x:Name="caPlaceHolder" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="8" Grid.ColumnSpan="2" Grid.Row="1" Text="Enter number here" Width="68"/>
+
+        <Button x:Name="_assignX" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="1" Grid.Column="0" Content="Assign X" Click="On_Assign_X" ClickMode="Press" Width="80" Margin="60,0,0,0"/>
+        <Button x:Name="_assignY" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="1" Grid.Column="0" Content="Assign Y" Click="On_Assign_Y" ClickMode="Press" Width="80" Margin="60,0,0,0" />
+        <Button x:Name="_clear" HorizontalAlignment="Left" VerticalAlignment="Bottom" Grid.Row="1" Grid.Column="0" Content="Clear Variables" Click="On_ClearXY" ClickMode="Press" Width="80" Margin="60,0,0,0"/>
+        <Button x:Name="_add" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="2" Grid.Column="0" Content="Add" Click="On_Add_Click" ClickMode="Press" Width="80" Margin="60,0,0,0"/>
+        <Button x:Name="_subtract" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="2" Grid.Column="0" Content="Subtract" ClickMode="Press" Click="On_Subtract_Click" Width="80" Margin="200,0,0,0"/>
+        <Button x:Name="Multiply" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="2" Grid.Column="1" Content="Multiply" Click="On_Multiply_Click" ClickMode="Press" Margin="58,0,0,0" Width="80"/>
+        <Button x:Name="Divide" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="2" Grid.Column="1" Content="Divide" Click="On_Divide_Click" ClickMode="Press" Margin="256,0,0,0" Width="80"/>
+    </Grid>
+</Window>
